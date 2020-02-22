@@ -59,3 +59,22 @@ sudo netfilter-persistent reload
 设置反向代理:
 
 ![Snipaste_2020-01-30_19-03-21.png](http://cdn.jun6.net/2020/01/30/ac865a78a617b.png)
+
+
+## 为什么提示密码错误
+
+1. 请检查密码文件中是否包含中文，如果包含，请保持文件编码为 UTF8。
+2. 请检查密码文件中是否包含空格, 换行符等不可见字符.
+
+
+## 前后端分离如何部署
+
+下载 `https://github.com/zhaojun1998/zfile/tree/master/src/main/resources/static` 路径下的所有文件, 或在程序运行后的相对路径：`WEB-INF/classes/static`.
+
+修改 `zfile.config.json` 内文件指向后端地址, 然后放到静态资源服务器, 或对象存储即可:
+
+```json
+{
+  "baseUrl": "http://xx.xxx.cn:8080"
+}
+```

@@ -1,14 +1,14 @@
 ## 密码文件夹
 
-在需要密码访问的文件夹，添加 `password。txt`，文件内容为文件夹密码，如为中文密码，请保证文件为 `UTF8` 编码。
+在需要密码访问的文件夹，添加 `password.txt`，文件内容为文件夹密码，如为中文密码，请保证文件为 `UTF8` 编码。
 
-!> 此文件不会显示，但无法防止被下载，可指定密码文件名，在配置文件 `application。yml` 中 `zfile -> conconstant -> password` 修改。
+!> 此文件不会显示，但无法防止被下载，可指定密码文件名，在配置文件 `application.yml` 中 `zfile -> conconstant -> password` 修改。
 
 ## 文档区
 
-在需要添加文档的文件夹，添加 `readme。txt`，文件内容为文件夹密码，如包含中文，请保证文件为 `UTF8` 编码。
+在需要添加文档的文件夹，添加 `readme.txt`，文件内容为文件夹密码，如包含中文，请保证文件为 `UTF8` 编码。
 
-!> 此文件不会显示，可指定文档文件名，在配置文件 `application。yml` 中 `zfile -> conconstant -> readme` 修改。
+!> 此文件不会显示，可指定文档文件名，在配置文件 `application.yml` 中 `zfile -> conconstant -> readme` 修改。
 
 ## 自定义 CSS JS
 

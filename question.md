@@ -1,7 +1,28 @@
+## 忘记管理员账号密码怎么办
+
+修改配置文件: 
+
+```bash
+vi ~/zfile/WEB-INF/classes/application.yml
+```
+
+编辑 `zfile.debug` 项为 `zfile.debug = true`
+
+然后访问您的服务 `http(s)://ip:port/debug/resetPwd` 既可将用户名密码强制修改为 `admin`  `123456`。
+
+
+```bash
+zfile:
+  debug: true
+  ...
+```
+
+!> 修改完切记及时关闭 `debug` 模式，防止出现安全问题。
+
 ## 如何更改端口
 
 ```bash
-vim ~/zfile/WEB-INF/classes/application.yml
+vi ~/zfile/WEB-INF/classes/application.yml
 ```
     
 ```yaml
@@ -50,15 +71,15 @@ sudo netfilter-persistent reload
 
 首先点击 `网站` -> `新增站点`:
 
-![Snipaste_2020-01-30_19-00-49.png](http://cdn.jun6.net/2020/01/30/558b35c21519c.png)
+<img src="http://cdn.jun6.net/2020/01/30/558b35c21519c.png" width="30%"></img>
 
 点击反向代理:
 
-![Snipaste_2020-01-30_19-01-31.png](http://cdn.jun6.net/2020/01/30/2bf2585516f8d.png)
+<img src="http://cdn.jun6.net/2020/01/30/2bf2585516f8d.png" width="30%"></img>
 
 设置反向代理:
 
-![Snipaste_2020-01-30_19-03-21.png](http://cdn.jun6.net/2020/01/30/ac865a78a617b.png)
+<img src="https://cdn.jun6.net/2020/01/30/ac865a78a617b.png" width="30%"></img>
 
 
 ## 为什么提示密码错误
@@ -78,3 +99,9 @@ sudo netfilter-persistent reload
   "baseUrl": "http://xx.xxx.cn:8080"
 }
 ```
+
+## 如何查看当前的 ZFile 版本
+
+打开 `ZFile` 任意页面，然后按 `F12` 键打开 `DevTools`，点 `Console` 栏，可看到版本信息。
+
+<img src="https://cdn.jun6.net/2020/06/27/31d48ea5d0809.png" width="50%"></img>

@@ -16,15 +16,21 @@
 * 内存缓存 (免安装)
 * 内存数据库 (免安装)
 * 个性化配置
-* 自定义目录的 header 说明文件
+* 自定义目录的 readme 说明文件
 * 自定义 JS, CSS
 * 文件夹密码
 * 支持在线浏览文本文件, 视频, 图片, 音乐. (支持 FLV 和 HLS)
 * 文件/目录二维码
-* 缓存动态开启, 缓存自动刷新
-* 全局搜索
+* 缓存动态开启, ~~缓存自动刷新 (v2.2 及以前版本支持)~~
+* ~~全局搜索 (v2.2 及以前版本支持)~~
+* 同时挂载多个存储策略
 * 支持 阿里云 OSS, FTP, 华为云 OBS, 本地存储, MINIO, OneDrive 国际/家庭/个人版, OneDrive 世纪互联版, 七牛云 KODO, 腾讯云 COS, 又拍云 USS.
 
-## 演示地址
 
-在线地址 : [https://zfile.jun6.net/](https://zfile.jun6.net/)
+## 源码地址
+
+项目源码 : [https://github.com/zhaojun1998/zfile/](https://github.com/zhaojun1998/zfile/)
+
+前端源码 : [https://github.com/zhaojun1998/zfile-vue/](https://github.com/zhaojun1998/zfile-vue/)
+
+文档源码 : [https://github.com/zhaojun1998/zfile-docs/](https://github.com/zhaojun1998/zfile-docs/)

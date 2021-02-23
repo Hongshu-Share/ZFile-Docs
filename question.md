@@ -1,4 +1,4 @@
-## 忘记管理员账号密码怎么办
+## 忘记管理员账号密码怎么办 :id=reset-pwd
 
 修改配置文件: 
 
@@ -19,7 +19,7 @@ zfile:
 
 !> 修改完切记及时关闭 `debug` 模式，防止出现安全问题。
 
-## 如何更改端口
+## 如何更改端口  :id=modify_port
 
 ```bash
 vi ~/zfile/WEB-INF/classes/application.yml
@@ -100,7 +100,7 @@ sudo netfilter-persistent reload
 }
 ```
 
-## 如何查看当前的 ZFile 版本
+## 如何查看当前的 ZFile 版本  :id=look-version
 
 打开 `ZFile` 任意页面，然后按 `F12` 键打开 `DevTools`，点 `Console` 栏，可看到版本信息。
 

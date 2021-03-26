@@ -1,4 +1,4 @@
-* [项目简介](README.md)
+* [项目简介](home.md)
 * [快速安装](install.md)
 * [参数配置](config.md)
 * [功能介绍](feature.md)

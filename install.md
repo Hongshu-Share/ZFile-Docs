@@ -37,6 +37,22 @@ chmod +x ~/zfile/bin/*.sh
  ~/zfile/bin/restart.sh     # 重启项目
 ```
 
+### 更新项目
+
+#### 删除旧版本
+
+```bash
+~/zfile/bin/stop.sh && rm -rf ~/zfile
+```
+
+#### 安装新版本
+```bash
+wget -P ~ https://c.jun6.net/ZFILE/zfile-release.war
+cd ~
+mkdir zfile && unzip zfile-release.war -d zfile && rm -rf zfile-release.war
+chmod +x ~/zfile/bin/*.sh
+```
+
 ## Windows
 
 ### 安装依赖

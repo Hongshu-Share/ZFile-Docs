@@ -6,3 +6,4 @@
 * [**使用示例**](example.md)
 * [反馈交流](feedback.md)
 * [赞助作者](sponsor.md)
+* [特别赞助](sponsorServer.md)

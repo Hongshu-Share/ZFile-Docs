@@ -36,16 +36,32 @@ server:
 
 ## 为什么启动后无法访问
 
+### 端口被占用
+
+请自行检查 zfile 启动端口是否被占用
+
+### jdk 版本错误
+
+zfile 仅支持运行在 `jdk 1.8` 版本下，请执行命令 `java -version` 命令，查看 `jdk` 版本，包含类似以下字样才是 `jdk` 安装正确.
+
+```bash
+openjdk version "1.8.0_292"
+OpenJDK Runtime Environment (build 1.8.0_292-b10)
+OpenJDK 64-Bit Server VM (build 25.292-b10, mixed mode)
+```
+
+### 防火墙未开启
+
 可能是防火墙没开启. 下面介绍如何防火墙开启端口. 对于阿里云、腾讯云、谷歌云等厂商, 可能还需要额外去后台开启防火墙.
 
-### CentOS 7.x
+#### CentOS 7.x
 
 ```bash
 firewall-cmd --zone=public --add-port=8080/tcp --permanent # 开放 8080 端口
 firewall-cmd --reload                                      # 重启firewall
 ```
 
-### Ubuntu 16.x / Debian 9.x
+#### Ubuntu 16.x / Debian 9.x
 
 ```bash
 iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
@@ -56,7 +72,8 @@ sudo netfilter-persistent reload
 ```
 
 
-### 宝塔面板
+
+#### 宝塔面板
 
 宝塔面板可以去后台开放端口:
 
@@ -102,6 +119,6 @@ sudo netfilter-persistent reload
 
 ## 如何查看当前的 ZFile 版本  :id=look-version
 
-打开 `ZFile` 任意页面，然后按 `F12` 键打开 `DevTools`，点 `Console` 栏，可看到版本信息。
+在 `Chrome/Firefox` 系浏览器下打开 `ZFile` 任意页面，然后按 `F12` 键打开 `DevTools`，点 `Console` 栏，可看到版本信息。
 
 <img src="https://cdn.jun6.net/2020/06/27/31d48ea5d0809.png" width="50%"></img>

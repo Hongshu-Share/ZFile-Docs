@@ -12,7 +12,9 @@ server:
   port: 8080
 ```
 
-## 日志路径
+## 路径相关
+
+### 日志路径
 
 ```yml
 zfile:
@@ -20,7 +22,7 @@ zfile:
     path: ${user.home}/.zfile/logs
 ```
 
-## 数据库文件路径
+### 数据库文件路径
 
 ```yml
 zfile:
@@ -28,7 +30,7 @@ zfile:
     path: ${user.home}/.zfile/db/zfile
 ```
 
-## 临时文件路径
+### 临时文件路径
 
 系统运行过程中，可能会产生一些临时文件，如解析音频文件的歌手和封面时，会先下载音频到服务器，解析后会自动删除，此文件的下载临时路径为如下: 
 
@@ -38,7 +40,9 @@ zfile:
     path: ${user.home}/.zfile/tmp
 ```
 
-## 缓存自动刷新时间间隔
+## 缓存相关
+
+### 缓存自动刷新时间间隔
 
 缓存自动刷新任务间隔时间，每隔多长时间检测一次到期的缓存 KEY 并自动刷新，单位为秒。
 
@@ -49,7 +53,7 @@ zfile:
       interval: 1
 ```
 
-## 缓存过期时间
+### 缓存过期时间
 
 目录缓存过期时间 和 下载地址过期时间(需存储策略支持)，单位为秒。
 
@@ -109,3 +113,13 @@ zfile:
 2. 可以访问 `http(s)://ip:port/debug/resetPwd`，会将用户名强制重置为 admin，密码修改为 123456。
 
 !> 在配置文件 application.yml 中 zfile -> debug 修改。
+
+
+## 自定义直链前缀
+
+默认直链前缀为 `directlink`, 如 https://zfile.jun6.net/directlink/2/ZFile.md ，可自定义修改为其他值，**但修改之前的直链将无法访问**。
+
+```yml
+zfile:
+  directLinkPrefix: directlink
+```
